@@ -33,6 +33,7 @@ namespace WebGYM.Controllers
         {
             try
             {
+                
                 var userId = Convert.ToInt32(this.User.FindFirstValue(ClaimTypes.Name));
 
                 List<PaymentDetailsViewModel> allMembers = _paymentDetails.GetAll(queryParameters, userId).ToList();
@@ -54,9 +55,9 @@ namespace WebGYM.Controllers
                     value = allMembers
                 });
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                throw ex;
             }
         }
 
