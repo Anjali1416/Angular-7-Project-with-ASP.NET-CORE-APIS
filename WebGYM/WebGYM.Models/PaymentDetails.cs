@@ -13,6 +13,7 @@ namespace WebGYM.Models
     {
         [Key]
         public long PaymentID { get; set; }
+        public long TestChange { get; set; }
         public int PlanID { get; set; }
         public int? WorkouttypeID { get; set; }
         public string Paymenttype { get; set; }
